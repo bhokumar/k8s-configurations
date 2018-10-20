@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: hello-world
+  labels: 
+    zone: prod
+    version: v1
+spec:
+  containers:
+  - name: hello-ctr
+    image: bhoopendra/jms-client:latest
+    ports:
+      containerPort: 8080
