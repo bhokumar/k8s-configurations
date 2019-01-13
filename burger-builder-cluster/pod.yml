@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: burger-builder
+  labels: 
+    zone: prod
+    version: v1
+    component: burger
+spec:
+  containers:
+  - name: burger-builder
+    image: bhoopendra/burger-builder:latest
+    ports:
+      - containerPort: 80
